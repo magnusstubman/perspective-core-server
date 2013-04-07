@@ -15,7 +15,6 @@ Alpha quality for now - work in progress!
 Currently only a REST-api is available, but we plan to add a front-end shortly.
 
 ## TODO
-* Make ports etc. configurable
 * Support for `/users`
 * Support for `/statuses`
 * Create simple front-end
