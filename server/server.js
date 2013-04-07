@@ -18,6 +18,8 @@ var startServer = function() {
 
 db.setup({
     config: {
+        host: config.rethinkdb.host,
+        port: config.rethinkdb.port,
         tables: ["tasks"]
     },
     success: startServer

@@ -5,6 +5,8 @@ function Db() {
 }
 
 Db.prototype.setup = function(options) {
+    this.config = options.config;
+
 	var tables = options.config.tables,
 		that = this;
 
@@ -27,7 +29,7 @@ Db.prototype.connect = function(callback) {
     var dbName = 'perspective';
 
 	if(!instance.connection) {
-		rethinkdb.connect({ host: 'localhost', port: 28015 }, function(err, conn) {
+		rethinkdb.connect({ host: instance.config.host, port: instance.config.port }, function(err, conn) {
 	  		if(err) throw err;
 	  		console.log("Database connection established");
             instance.connection = conn;
