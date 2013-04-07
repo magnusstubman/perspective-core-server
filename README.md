@@ -9,7 +9,7 @@ Alpha quality for now - work in progress!
 
 ## Usage
 1. Start RethinkDB server with `rethinkdb`
-2. Start the server with `node server.js`
+2. Start the server with `node server/server.js`
 3. Access API via `http://localhost:8888/tasks`
 
 Currently only a REST-api is available, but we plan to add a front-end shortly.
