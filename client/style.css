@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-	color: #734854;
+	color: #85a394;
 }
 
 li {
@@ -21,13 +21,17 @@ li {
 
 .progress {
 	position:absolute;
-	background: #736766;
+	background: #99bcaa;
 	top: 0;
 	height:100%;
+	-webkit-transition: width 1s ease-out;
+    -moz-transition: width 1s ease-out;
+    -o-transition: width 1s ease-out;
+    transition: width 1s ease-out;
 }
 
 .task {
-	padding: 0.7em;
+	padding: 0.7em 1em;
 	position: absolute;
 	z-index:2;
 	top:0;
@@ -40,6 +44,18 @@ li {
 	border: 1px solid #736766;
 	border-radius: 3px;
 	padding: 0.2em 0.5em;
+}
+
+.add {
+	position: absolute;
+	top: 1.3em;
+	right: 0.7em;
+	font-size: 1.5em;
+	color: #D9D7C5;
+}
+
+.add:hover {
+	color: #99bcaa;
 }
 
 ol {
