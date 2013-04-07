@@ -4,42 +4,42 @@ function Db() {
 
 }
 
-Db.prototype.setup = function() {
-	var tables = ["tasks"],
+Db.prototype.setup = function(options) {
+	var tables = options.config.tables,
 		that = this;
 
     that.connect(function(conn) {
         tables.forEach(function(table) {
             that.db.tableCreate(table).run(conn, function(err, res) {
-                if(err) {
-                    console.log(table + " already exists");
+                if(res && res.created === 1) {
+                    console.log("Database created");
                 }
             });
         });
+
+        options.success();
     });
 };
 
 Db.prototype.connect = function(callback) {
 	var instance = this;
 
+    var dbName = 'perspective';
+
 	if(!instance.connection) {
-		console.log("no connection, creating new connection");
 		rethinkdb.connect({ host: 'localhost', port: 28015 }, function(err, conn) {
 	  		if(err) throw err;
-	  		console.log("Connection established");
+	  		console.log("Database connection established");
             instance.connection = conn;
 
-            console.log("Creating database");
-	  		rethinkdb.dbCreate('perspective').run(conn, function(err, res) {
+	  		rethinkdb.dbCreate(dbName).run(conn, function(err, res) {
 				if(res && res.created === 1) {
-                    console.log("Database created");
-                } else {
-                    console.log("Database already exists");
+                    console.log("Database created: " + dbName);
                 }
 			});
 
-			instance.db = rethinkdb.db('perspective');
-			conn.use('perspective');
+			instance.db = rethinkdb.db(dbName);
+			conn.use(dbName);
             callback(conn, instance.db);
 	  	});
   	} else {
