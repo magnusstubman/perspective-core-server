@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 1em;
+	background: #F2F2E9;
+}
+
+h1 {
+	color: #734854;
+}
+
+li {
+	background: #D9D7C5;
+	width: 100%;
+	padding: 1em;
+	margin-bottom:0.2em;
+}
+
+ol {
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+}
