@@ -4,7 +4,6 @@ module.exports = {
 	initialize: function(server) {
 		server.get('/tasks', function(req, res, next) {
             db.get("tasks", function(result) {
-                console.log(result);
                 res.send(result);
                 next();
             });
