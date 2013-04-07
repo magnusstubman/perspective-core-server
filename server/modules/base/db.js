@@ -11,15 +11,17 @@ Db.prototype.setup = function(options) {
 		that = this;
 
     that.connect(function(conn) {
-        tables.forEach(function(table) {
+        tables.forEach(function(table, index) {
             that.db.tableCreate(table).run(conn, function(err, res) {
                 if(res && res.created === 1) {
-                    console.log("Database created");
+                    console.log("Table created: " + table);
+                }
+
+                if (index === tables.length - 1) {
+                    options.success();
                 }
             });
         });
-
-        options.success();
     });
 };
 
