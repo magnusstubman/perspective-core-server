@@ -12,14 +12,38 @@ h1 {
 }
 
 li {
+	position: relative;
 	background: #D9D7C5;
 	width: 100%;
-	padding: 1em;
 	margin-bottom:0.2em;
+	height: 3em;
+}
+
+.progress {
+	position:absolute;
+	background: #736766;
+	top: 0;
+	height:100%;
+}
+
+.task {
+	padding: 0.7em;
+	position: absolute;
+	z-index:2;
+	top:0;
+}
+
+.size {
+	position: absolute;
+	right: 0.5em;
+	top: 0.7em;
+	border: 1px solid #736766;
+	border-radius: 3px;
+	padding: 0.2em 0.5em;
 }
 
 ol {
-	list-style-position: inside;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
