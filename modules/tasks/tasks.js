@@ -3,8 +3,11 @@ var db = require("../base/db.js");
 module.exports = {
 	initialize: function(server) {
 		server.get('/tasks', function(req, res, next) {
-			res.send([]);
-			return next();
+            db.get("tasks", function(result) {
+                console.log(result);
+                res.send(result);
+                next();
+            });
 		});
 
 		server.post('/tasks', function(req, res, next) {
