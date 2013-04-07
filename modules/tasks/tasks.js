@@ -22,5 +22,11 @@ var tasks = [
 				res.send(tasks);
 				return next();
 			});
+
+			server.post('/tasks', function(req, res, next) {
+				tasks.push(req.body);
+				res.send(201, req.body);
+				return next();
+			});
 		}
 	};
