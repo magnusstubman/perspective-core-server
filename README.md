@@ -14,6 +14,10 @@ Alpha quality for now - work in progress!
 
 Currently only a REST-api is available, but we plan to add a front-end shortly.
 
+## Tips
+
+1. Use nodemon to restart server on file change: https://github.com/remy/nodemon
+
 ## TODO
 * Support for `/users`
 * Support for `/statuses`
