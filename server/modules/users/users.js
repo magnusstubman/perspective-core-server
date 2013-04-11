@@ -1,10 +1,15 @@
-var db = require("../base/db.js"),
+var services = require("../services"),
     validation = require("../../components/validation.js");
 
 module.exports = {
     initialize: function(server) {
+        services.db.registerTable("users");
+    },
+
+    mountAPI: function(server) {
+
         server.get('/users', function(req, res, next) {
-            db.get("users", function(result) {
+            services.db.get("users", function(result) {
                 res.send(result);
                 next();
             });
@@ -23,7 +28,7 @@ module.exports = {
                 return;
             }
 
-            db.insert("users", req.body, function() {
+            services.db.insert("users", req.body, function() {
                 res.send(201, req.body);
                 next();
             });

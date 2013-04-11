@@ -19,5 +19,9 @@
     "restify": "~2.3.5",
     "rethinkdb": "~1.4.0-3",
     "underscore": "~1.4.4"
+  },
+
+  "bin": {
+    "perspective-server": "bin/perspective-server.js"
   }
 }

@@ -1,24 +1,23 @@
 var rethinkdb = require('rethinkdb');
 
-function Db() {
-
+function Db(config) {
+    this.config = config;
+    this.tables = [];
 }
 
 Db.prototype.setup = function(options) {
-    this.config = options.config;
 
-	var tables = options.config.tables,
-		that = this;
+	var that = this;
 
     that.connect(function(conn) {
-        tables.forEach(function(table, index) {
+        that.tables.forEach(function(table, index) {
             that.db.tableCreate(table).run(conn, function(err, res) {
                 if(res && res.created === 1) {
                     console.log("Table created: " + table);
                 }
 
-                if (index === tables.length - 1) {
-                    options.success();
+                if (index === that.tables.length - 1) {
+                    options.onSuccess();
                 }
             });
         });
@@ -51,6 +50,10 @@ Db.prototype.connect = function(callback) {
     }
 };
 
+Db.prototype.registerTable = function(table) {
+    this.tables.push(table);
+}
+
 Db.prototype.insert = function(table, json, callback) {
     this.connect(function(conn, db){
         db.table(table).insert(json).run(conn, function(err, result) {
@@ -72,4 +75,4 @@ Db.prototype.get = function(table, callback) {
     });
 }
 
-module.exports = new Db();
+module.exports = Db;

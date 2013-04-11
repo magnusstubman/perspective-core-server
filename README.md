@@ -5,22 +5,21 @@ Alpha quality for now - work in progress!
 
 ## Installation
 1. Install node.js (tested on 0.10.2) and RethinkDB (tested on 1.4.2)
-2. npm install
+2. cd server && npm install
 
 ## Usage
 1. Start RethinkDB server with `rethinkdb`
-2. Start the server with `node server/server.js`
+2. Start the server with `perspective-server`
 3. Access API via `http://localhost:8888/tasks`
 
 Currently only a REST-api is available, but we plan to add a front-end shortly.
 
-## Tips
+## Development
 
-1. Use nodemon to restart server on file change: https://github.com/remy/nodemon
+### Reload server on changes
+1. `npm install -g nodemon`
+2. `nodemon bin/perspective-server.js`
 
 ## TODO
-* Support for `/users`
-* Support for `/statuses`
-* Create simple front-end
-	* Prioritize tasks (ie. product backlog)
-	* Scrum/kanban board
+* Prioritize tasks (ie. product backlog)
+* Scrum/kanban board
