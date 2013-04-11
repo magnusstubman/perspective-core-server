@@ -23,3 +23,6 @@ Currently only a REST-api is available, but we plan to add a front-end shortly.
 ## TODO
 * Prioritize tasks (ie. product backlog)
 * Scrum/kanban board
+* Tests (mocha?). Both front-end and back-end
+* Front-end build pipeline, r.js
+* Binary and NPM package for client
