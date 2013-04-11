@@ -6,39 +6,11 @@
 	<link href="style.css" rel="stylesheet" />
 	<link href='icons/stylesheets/general_foundicons.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
+	<script data-main="js/main" src="lib/require.js"></script>
 </head>
 <body>
-	<h1>Backlog</h1> <i class="foundicon-plus add"></i>
-	<ol>
-		<li>
-			<div class="task">Buy groceries</div>
-			<div class="progress"></div>
-			<div class="size">M</li>
-		</li>
-		<li>
-			<div class="task">Make dinner</div>
-			<div class="progress"></div>
-			<div class="size">L</li>
-		</li>
-		<li>
-			<div class="task">Prepare table</div>
-			<div class="progress"></div>
-			<div class="size">XS</li>
-		</li>
-		<li>
-			<div class="task">Do the dishes</div>
-			<div class="progress"></div>
-			<div class="size">S</li>
-		</li>
+	<h1>Backlog</h1> <i id="add" class="foundicon-plus add"></i>
+	<ol id="task-list">
 	</ol>
-
-	<script>
-	var tasks = document.querySelectorAll("li .progress"),
-		taskCompletion = [80, 40, 0, 0];
-	for(var i = 0; i < tasks.length; i++) {
-		tasks[i].style.width = taskCompletion[i] + "%";
-	}
-	</script>
 </body>
 </html>
