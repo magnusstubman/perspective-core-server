@@ -1,27 +1,24 @@
 {
-  "name": "perspective",
-  "version": "0.0.1",
-  "description": "perspective ===========",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hinderberg/perspective.git"
-  },
-  "author": "",
-  "license": "BSD",
-  "gitHead": "ce53354ebdfad7d70a789d4ec4ff11bd63e9b22d",
-  "readmeFilename": "README.md",
-
-  "dependencies": {
-    "restify": "~2.3.5",
-    "rethinkdb": "~1.4.0-3",
-    "underscore": "~1.4.4"
-  },
-
-  "bin": {
-    "perspective-server": "bin/perspective-server.js"
-  }
+	"name": "perspective-server",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hinderberg/perspective.git"
+	},
+	"dependencies": {
+		"restify": "~2.3.5",
+		"rethinkdb": "~1.4.0-3",
+		"underscore": "~1.4.4"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"should": "*",
+		"sinon": "*"
+	},
+	"bin": {
+		"perspective-server": "./bin/perspective-server.js"
+	},
+	"scripts": {
+		"test": "make test"
+	}
 }
