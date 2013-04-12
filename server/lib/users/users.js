@@ -1,5 +1,5 @@
 var services = require("../services"),
-    validation = require("../../components/validation.js");
+    validation = require("../validation");
 
 module.exports = {
     initialize: function(server) {

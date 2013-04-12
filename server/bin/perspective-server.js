@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var Server = require('../modules/base/server.js'),
-	Db = require("../modules/base/db.js"),
-    services = require("../modules/services.js"),
+var Server = require('../lib/server'),
+	Db = require("../lib/db"),
+    services = require("../lib/services"),
 	config = require("../config.json"),
 
     server = new Server(config.server),
@@ -13,7 +13,7 @@ services.register("server", server);
 services.register("db", database);
 
 modules = config.modules.map(function(name) {
-    var module = require("../modules/" + name + "/" + name + ".js");   
+    var module = require("../lib/" + name + "/" + name + ".js");
     module.initialize();
     return module;
 });
