@@ -162,43 +162,44 @@ a tasklist. Example 2: attach other lists, such as "risks", "tests" or users as 
 * TODO: support "blocked" via labels?
 
 ### Activity
-[
-	{
-		id: a1,
-		time: utc,
-		user: u1,
-		parent: {
-			type: "task",
-			id: t2
+
+	[
+		{
+			id: a1,
+			time: utc,
+			user: u1,
+			parent: {
+				type: "task",
+				id: t2
+			}
+			text: "Created task",
+			labels: [lab1]
+		},
+		{
+			id: a1,
+			time: utc,
+			user: u1,
+			parent: {
+				type: "list",
+				id: tl2
+			}
+			text: "Awesome show!",
+			labels: [lab2]
 		}
-		text: "Created task",
-		labels: [lab1]
-	},
-	{
-		id: a1,
-		time: utc,
-		user: u1,
-		parent: {
-			type: "list",
-			id: tl2
-		}
-		text: "Awesome show!",
-		labels: [lab2]
-	}
-]
+	]
 
 ### Labels
 
-[
-	{
-		id: lab1,
-		name: "Task event"
-	},
-	{
-		id: lab2,
-		name: "Comment"
-	}
-]
+	[
+		{
+			id: lab1,
+			name: "Task event"
+		},
+		{
+			id: lab2,
+			name: "Comment"
+		}
+	]
 
 ### Statuses
 
