@@ -137,26 +137,26 @@ a tasklist. Example 2: attach other lists, such as "risks", "tests" or users as 
 * A specific task which may be assigned to a user
 * Cannot have subtasks, instead a task can be converted to a list. This makes it easy to break "Unspecified task 1" into "Tasklist 1"
 
-	[
-		{
-			id: t2,
-			name: "Research information on Brody",
-			status: s2,
-			assignee: u1
-		},
-		{
-			id: t3,
-			name: "Watch episode 1",
-			status: s5,
-			assignee: u1
-		},
-		{
-			id: t3,
-			name: "Watch episode 2",
-			status: s4,
-			assignee: u1
-		}
-	]
+		[
+			{
+				id: t2,
+				name: "Research information on Brody",
+				status: s2,
+				assignee: u1
+			},
+			{
+				id: t3,
+				name: "Watch episode 1",
+				status: s5,
+				assignee: u1
+			},
+			{
+				id: t3,
+				name: "Watch episode 2",
+				status: s4,
+				assignee: u1
+			}
+		]
 
 * Assignee: a user responsible for this task
 * TODO: support "blocked" via labels?
