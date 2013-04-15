@@ -10,7 +10,7 @@ Alpha quality for now - work in progress!
 2. `npm install`
 3. Install desired plugins from `perspective-<pluginrepo>` (not implemented yet)
 4. Start RethinkDB server with `rethinkdb`
-5. Start the server with `perspective-server`
+5. Start the server with `perspective-api`
 6. Access API via `http://localhost:8888/tasks`
 7. Looking for a front-end? Checkout the [perspective client repo](https://github.com/perspective/perspective)
 
