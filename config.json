@@ -12,10 +12,7 @@
   },
   "plugins": [
     {
-      "name": "lists",
-      "config": {
-        "a": "b"
-      }
+      "name": "lists"
     }
   ]
 }
