@@ -20,6 +20,11 @@ Alpha quality for now - work in progress!
 1. `npm install -g nodemon`
 2. `nodemon bin/perspective-api.js`
 
+### Load plugins
+1. Clone desired plugin
+2. In plugin folder: run `npm link`
+3. In perspective: add plugin to `plugins` with desired configuration (if any)
+
 ## TODO
 * Prioritize tasks (ie. product backlog)
 * Plugin architecture

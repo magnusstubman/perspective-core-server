@@ -2,24 +2,20 @@
 
 var Server = require('../lib/server'),
   Db = require("../lib/db"),
-  services = require("../lib/services"),
   config = require("../config.json"),
-
+  loadPlugins = require("../lib/plugins"),
   server = new Server(config.server),
-  database = new Db(config.db),
-  modules = [];
+  database = new Db(config.db);
 
-services.register("server", server);
-services.register("db", database);
+database.setup().then(function() {
+  server.start();
+  var plugins = loadPlugins(config.plugins, server, database);
+  plugins.forEach(function(plugin) {
+    console.log('Setting up plugin with name: ' + plugin.config.name);
 
-modules = config.modules.map(function(name) {
-  var module = require("../lib/" + name + "/" + name + ".js");
-  module.initialize();
-  return module;
-});
-
-database.setup({
-  onSuccess: function() {
-    server.start(modules);
-  }
+    plugin.api.setup();
+  });
+}).fail(function(error) {
+  console.log(error);
+  process.exit(1);
 });
