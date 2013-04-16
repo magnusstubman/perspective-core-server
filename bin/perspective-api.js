@@ -15,6 +15,10 @@ database.setup().then(function(){
 	var plugins = loadPlugins(config.plugins, server, database);
 	plugins.forEach(function(plugin) {
         console.log('Setting up plugin with name: ' + plugin.config.name);
+
 		plugin.api.setup();
 	});
+}).fail(function(error) {
+    console.log(error);
+    process.exit(1);
 });
