@@ -1,24 +1,24 @@
 {
-	"name": "perspective-api",
-	"version": "0.0.1",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/perspective/perspective-api.git"
-	},
-	"dependencies": {
-		"restify": "~2.3.5",
-		"rethinkdb": "~1.4.0-3",
-		"underscore": "~1.4.4"
-	},
-	"devDependencies": {
-		"mocha": "*",
-		"should": "*",
-		"sinon": "*"
-	},
-	"bin": {
-		"perspective-api": "./bin/perspective-api.js"
-	},
-	"scripts": {
-		"test": "make test"
-	}
+  "name": "perspective-api",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/perspective/perspective-api.git"
+  },
+  "dependencies": {
+    "restify": "~2.3.5",
+    "rethinkdb": "~1.4.0-3",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "sinon": "*"
+  },
+  "bin": {
+    "perspective-api": "./bin/perspective-api.js"
+  },
+  "scripts": {
+    "test": "make test"
+  }
 }

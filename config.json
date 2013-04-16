@@ -1,19 +1,19 @@
 {
-	"db": {
-		"host": "localhost",
-	    "port": 28015
-	},
+  "db": {
+    "host": "localhost",
+    "port": 28015
+  },
 
-	"server": {
-		"port": 8888,
-		"crossSiteRequest": {
-			"allowedOrigin": "http://localhost:8000"
-		}
-	},
+  "server": {
+    "port": 8888,
+    "crossSiteRequest": {
+      "allowedOrigin": "http://localhost:8000"
+    }
+  },
 
-	"modules": [
-		"tasks",
-		"users",
-		"status"
-	]
+  "modules": [
+    "tasks",
+    "users",
+    "status"
+  ]
 }
