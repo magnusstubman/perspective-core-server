@@ -11,9 +11,12 @@
 		}
 	},
 
-	"modules": [
-		"tasks",
-		"users",
-		"status"
+	"plugins": [
+		{
+			"name": "lists",
+			"config": {
+				"a": "b"
+			}
+		}
 	]
 }

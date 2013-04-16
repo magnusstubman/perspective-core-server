@@ -8,7 +8,8 @@
 	"dependencies": {
 		"restify": "~2.3.5",
 		"rethinkdb": "~1.4.0-3",
-		"underscore": "~1.4.4"
+		"underscore": "~1.4.4",
+		"q": "~0.9.3"
 	},
 	"devDependencies": {
 		"mocha": "*",

@@ -7,19 +7,25 @@ var Server = require('../lib/server'),
 
     server = new Server(config.server),
     database = new Db(config.db),
-    modules = []; 
+    modules = [];
 
-services.register("server", server);
-services.register("db", database);
+function loadPlugins() {
+	return config.plugins.map(function(plugin) {
+		var initializor = require("perspective-api-" + plugin.name);
+		return initializor(
+			{
+				server: server.instance,
+				db: database
+			},
+			plugin.config || {}
+		);
+	});
+}
 
-modules = config.modules.map(function(name) {
-    var module = require("../lib/" + name + "/" + name + ".js");
-    module.initialize();
-    return module;
-});
-
-database.setup({
-    onSuccess: function() {
-        server.start(modules);
-    }
+database.setup().then(function(){
+	server.start();
+	var plugins = loadPlugins();
+	plugins.forEach(function(plugin) {
+		plugin.setup();
+	});
 });
