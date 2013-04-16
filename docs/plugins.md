@@ -68,3 +68,4 @@
 	* plugins implement `function(req, res, next)` (webserver/inspired from filters)
 	* plugins are found in
 		* [https://github.com/senchalabs/connect/tree/master/lib/middleware](https://github.com/senchalabs/connect/tree/master/lib/middleware)
+* [hapi](https://github.com/spumko/hapi)
