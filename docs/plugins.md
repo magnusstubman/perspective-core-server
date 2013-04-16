@@ -69,3 +69,5 @@
 	* plugins are found in
 		* [https://github.com/senchalabs/connect/tree/master/lib/middleware](https://github.com/senchalabs/connect/tree/master/lib/middleware)
 * [hapi](https://github.com/spumko/hapi)
+	* Loads plugins from a folder (default node_modules)
+	* Check out pack.js for more information: hapi/lib/pack.js
