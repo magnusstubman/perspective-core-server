@@ -1,6 +1,7 @@
 {
   "name": "perspective-api",
   "version": "0.0.1",
+  "licence": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/perspective/perspective-api.git"
