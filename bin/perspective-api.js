@@ -9,7 +9,7 @@ var Server = require('../lib/server'),
 
 database.setup().then(function() {
   server.start();
-  var pluginsLoader = new PluginsLoader(server, database)
+  var pluginsLoader = new PluginsLoader(server, database);
   var plugins = pluginsLoader.load(config.plugins);
   plugins.forEach(function(plugin) {
     console.log('Setting up plugin with name: ' + plugin.config.name);
