@@ -13,7 +13,7 @@
   },
   "plugins": [
     {
-      "name": "lists"
+      "name": "tasks"
     }
   ]
 }
