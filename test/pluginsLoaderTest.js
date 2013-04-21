@@ -12,7 +12,8 @@ describe("plugins", function() {
   describe("loadPlugin", function() {
     it("calls load", function() {
       var stub = sinon.stub(pluginsLoader, "require");
-      stub.returns(function() {});
+      stub.returns(function() {
+      });
 
       pluginsLoader.loadPlugin({name: "test"});
       sinon.assert.calledOnce(stub);
@@ -21,7 +22,8 @@ describe("plugins", function() {
     it("returns plugin api and plugin config", function() {
       var stub = sinon.stub(pluginsLoader, "require");
       var plugin = function() {
-        return {coolApi: function() {}};
+        return {coolApi: function() {
+        }};
       };
       stub.returns(plugin);
       var pluginConfig = {name: "test"};
@@ -46,8 +48,26 @@ describe("plugins", function() {
 
   describe("load", function() {
     it("return a map of all plugins", function() {
+      var config = [
+        {
+          "name": "lists"
+        },
+        {
+          "name": "other"
+        }
+      ];
 
+      var stub = sinon.stub(pluginsLoader, "require");
+      var plugin = function() {
+        return {coolApi: function() {
+        }};
+      };
+      stub.returns(plugin);
+
+      var loadedPlugins = pluginsLoader.load(config);
+      sinon.assert.calledTwice(stub);
+      assert(loadedPlugins[0].config.name === "lists");
+      assert(loadedPlugins[1].config.name === "other");
     });
   });
-
 });
