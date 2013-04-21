@@ -1,7 +1,8 @@
 {
   "db": {
     "host": "localhost",
-    "port": 28015
+    "port": 28015,
+    "name": "perspective"
   },
 
   "server": {
