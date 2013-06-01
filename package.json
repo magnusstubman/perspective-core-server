@@ -10,8 +10,7 @@
     "restify": "~2.4.1",
     "rethinkdb": "~1.4.0-3",
     "underscore": "~1.4.4",
-    "q": "~0.9.3",
-    "bunyan": "~0.21.3"
+    "q": "~0.9.3"
   },
   "devDependencies": {
     "mocha": "*",
