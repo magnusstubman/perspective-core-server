@@ -10,7 +10,10 @@
     "restify": "~2.6.0",
     "rethinkdb": "~1.9.0-1",
     "underscore": "~1.4.4",
-    "q": "~0.9.7"
+    "q": "~0.9.7",
+    "perspective-core": "*",
+    "perspective-api-tasks": "*",
+    "perspective-api-views": "*"
   },
   "devDependencies": {
     "mocha": "*",
