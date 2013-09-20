@@ -25,7 +25,7 @@ While developing you'll need to:
 To ease this process, we recommend using [myrepos](https://github.com/joeyh/myrepos) - a tool to handle multiple repositories at once. Simply put [mr](https://github.com/joeyh/myrepos/blob/master/mr) on your `PATH` and you are good to go:
 
 1. `mkdir perspective`
-2. `curl -o .mrconfig https://github.com/perspective/perspective-api/blob/master/.mrconfig.example`
+2. `curl -o .mrconfig https://raw.github.com/perspective/perspective-api/master/.mrconfig.example`
 3. (review the .mrconfig file)
 4. `mr checkout`  
     will git clone all modules
