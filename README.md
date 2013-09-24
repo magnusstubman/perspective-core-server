@@ -6,7 +6,7 @@ This is perspective's api component. If you're not familiar with perspective, yo
 Alpha quality for now - work in progress!
 
 ## Usage
-1. Install node.js (tested on 0.10.2) and RethinkDB (tested on 1.4.2)
+1. Install node.js (tested on 0.10.2) and RethinkDB (tested on 1.9.0)
 2. `npm install`
 3. Install desired plugins from `perspective-<pluginrepo>` (not implemented yet)
 4. Start RethinkDB server with `rethinkdb`
