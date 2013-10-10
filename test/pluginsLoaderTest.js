@@ -1,7 +1,8 @@
-var assert = require("assert"),
-  sinon = require("sinon"),
-  PluginsLoader = require("../lib/pluginsLoader"),
-  pluginsLoader;
+var assert = require("assert");
+var sinon = require("sinon");
+var PluginsLoader = require("../lib/pluginsLoader");
+
+var pluginsLoader;
 
 
 describe("plugins", function() {
@@ -12,8 +13,7 @@ describe("plugins", function() {
   describe("loadPlugin", function() {
     it("calls load", function() {
       var stub = sinon.stub(pluginsLoader, "require");
-      stub.returns(function() {
-      });
+      stub.returns(function() {});
 
       pluginsLoader.loadPlugin({name: "test"});
       sinon.assert.calledOnce(stub);
@@ -22,8 +22,7 @@ describe("plugins", function() {
     it("returns plugin api and plugin config", function() {
       var stub = sinon.stub(pluginsLoader, "require");
       var plugin = function() {
-        return {coolApi: function() {
-        }};
+        return {coolApi: function() {}};
       };
       stub.returns(plugin);
       var pluginConfig = {name: "test"};
