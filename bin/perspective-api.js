@@ -7,9 +7,8 @@ var PluginsLoader = require("../lib/pluginsLoader");
 var apiLogger = require('../lib/apiLogger');
 
 
-db(config.db).then(function(dbAPI) {
-  var serverAPI = server(config.server);
-  var pluginsLoader = new PluginsLoader(serverAPI, dbAPI);
+db(config.db).then(function(createRepository) {
+  var pluginsLoader = new PluginsLoader(server(config.server), createRepository);
   var plugins = pluginsLoader.load(config.plugins);
   plugins.forEach(function(plugin) {
     apiLogger.info('Setting up plugin with name: ' + plugin.config.name);

@@ -38,10 +38,10 @@ describe("plugins", function() {
       stub.returns(spy);
 
       var pluginConfig = {name: "test", config: {}};
-      var serverAPI = {db: {}};
-      pluginsLoader.loadPlugin(pluginConfig, serverAPI);
+      var server = {db: {}};
+      pluginsLoader.loadPlugin(pluginConfig, server);
 
-      sinon.assert.calledWith(spy, serverAPI, pluginConfig.config);
+      sinon.assert.calledWith(spy, server, pluginConfig.config);
     });
   });
 
