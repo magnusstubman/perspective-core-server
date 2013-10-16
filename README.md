@@ -19,3 +19,9 @@ Want a UI? Go visit the [perspective client repo](https://github.com/perspective
 ## Plugin architecture
 Work in progress - see [docs/plugins.md](docs/plugins.md)
 
+
+
+License
+-------
+
+MIT
