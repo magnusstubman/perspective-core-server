@@ -1,10 +1,25 @@
 {
   "name": "perspective-api",
   "version": "0.0.1",
-  "licence": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "http://github.com/perspective/perspective-api/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/perspective/perspective-api.git"
+  },
+  "contributors":[
+    "Hans Magnus Inderberg <hinderberg@gmail.com> (http://hinderberg.no/)",
+    "Mads Mobœk <> ()"
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bin": {
+    "perspective-api": "./bin/perspective-api.js"
+  },
+  "scripts": {
+    "test": "make test"
   },
   "dependencies": {
     "restify": "~2.6.0",
@@ -19,11 +34,5 @@
     "mocha": "*",
     "should": "*",
     "sinon": "*"
-  },
-  "bin": {
-    "perspective-api": "./bin/perspective-api.js"
-  },
-  "scripts": {
-    "test": "make test"
   }
 }
