@@ -29,7 +29,8 @@
     "q": "~0.9.7",
     "perspective-core": "*",
     "perspective-api-tasks": "*",
-    "perspective-api-views": "*"
+    "perspective-api-views": "*",
+    "perspective-api-jenkins": "*"
   },
   "devDependencies": {
     "mocha": "*",
