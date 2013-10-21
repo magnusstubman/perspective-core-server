@@ -19,7 +19,13 @@
       "name": "views"
     },
     {
-      "name": "jenkins"
+      "name": "jenkins",
+      "config": {
+        "username": "",
+        "password": "",
+        "baseURI": "http://localhost:9999"
+
+      }
     }
   ]
 }
