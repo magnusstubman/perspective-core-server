@@ -1,13 +1,13 @@
 {
-  "name": "perspective-api",
+  "name": "perspective-core-server",
   "version": "0.0.1",
   "description": "",
   "bugs": {
-    "url": "http://github.com/perspective/perspective-api/issues"
+    "url": "http://github.com/perspective/perspective-core-server/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/perspective/perspective-api.git"
+    "url": "git://github.com/perspective/perspective-core-server.git"
   },
   "contributors":[
     "Hans Magnus Inderberg <hinderberg@gmail.com> (http://hinderberg.no/)",
@@ -15,26 +15,12 @@
   ],
   "license": "MIT",
   "readmeFilename": "README.md",
-  "bin": {
-    "perspective-api": "./bin/perspective-api.js"
-  },
+  "bin": {},
   "scripts": {
     "test": "make test"
   },
   "dependencies": {
-    "restify": "~2.6.0",
-    "websocket": "~1.0.8",
-    "rethinkdb": "~1.9.0-1",
-    "underscore": "~1.4.4",
-    "q": "~0.9.7",
-    "perspective-core": "*",
-    "perspective-api-tasks": "*",
-    "perspective-api-views": "*",
-    "perspective-api-jenkins": "*"
+    "bunyan": "~0.21.3"
   },
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "sinon": "*"
-  }
+  "devDependencies": {}
 }
