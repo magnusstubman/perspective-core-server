@@ -7,7 +7,7 @@ var pluginsLoader;
 
 describe("plugins", function() {
   beforeEach(function() {
-    pluginsLoader = new PluginsLoader({}, {});
+    pluginsLoader = new PluginsLoader({}, {}, {});
   });
 
   describe("loadPlugin", function() {
